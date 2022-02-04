@@ -13,3 +13,4 @@ jobs:
       - name: Run Deployment
         run: |
           echo Hey I startet a deployment
+          ls
