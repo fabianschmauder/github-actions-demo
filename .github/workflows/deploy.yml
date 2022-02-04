@@ -1,0 +1,15 @@
+name: Deploy our website
+
+on:
+  push:
+    branches: [ main ]
+
+
+jobs:
+  deploy-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Deployment
+        run: |
+          echo Hey I startet a deployment
