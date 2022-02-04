@@ -12,5 +12,11 @@ jobs:
         run: |
           aws --version
       - name: Run Deployment
+        env:
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+          AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
+          AWS_REGION: eu-central-1
         run: |
           echo Hey I startet a deployment
+          aws s3api list-buckets
