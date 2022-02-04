@@ -8,7 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Check AWS CLI
+        run: |
+          aws --version
       - name: Run Deployment
         run: |
           echo Hey I startet a deployment
-          ls
